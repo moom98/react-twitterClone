@@ -4,27 +4,27 @@ import { Avatar } from '@mui/material'
 import { ChatBubbleOutline, FavoriteBorder, PublishOutlined, Repeat, VerifiedUser } from '@mui/icons-material'
 
 
-function Post() {
+function Post({ displayName, userName, verified, text, avatar, image}) {
   return (
     <div className='post'>
         <div className="post__avatar">
-            <Avatar />
+            <Avatar src={avatar}/>
         </div>
         <div className="post__body">
             <div className="post__header">
                 <div className="post__headerText">
-                    <h3>プログラミングチュートリアル
+                    <h3>{displayName}
                     <span className="post__headerSpecial">
                         <VerifiedUser className="post__badge" />
-                        @ymkmy98
+                        @{userName}
                     </span>
                     </h3>
                 </div>
                 <div className="post__headerDescription">
-                    <p>twitterクローン</p>
+                    <p>{text}</p>
                 </div>
             </div>
-            <img src="https://source.unsplash.com/random/" alt="" />
+            <img src={image} alt="" />
             <div className="post__footer">
                 <ChatBubbleOutline fontSize="small" />
                 <Repeat fontSize="small" />
