@@ -13,9 +13,10 @@
     color: var(--twitter-color);
 }
 
-.sidebarOption .MuiSvgIcon-root{
-    /* color: var(--twitter-color); */
+.sidebarOption.is-active{
+    color: var(--twitter-color);
 }
+
 
 .sidebarOption h2{
     font-size: 20px;
